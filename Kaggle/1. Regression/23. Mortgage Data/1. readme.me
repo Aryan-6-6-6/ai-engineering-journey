@@ -1,0 +1,178 @@
+# 🏠 Mortgage Data Price Prediction using Machine Learning
+
+## 📖 Overview
+
+This project focuses on predicting mortgage values using a complete Machine Learning workflow on the Mortgage Data dataset. The notebook covers data exploration, preprocessing, feature engineering, model training, hyperparameter tuning, and performance evaluation to identify the most accurate regression model.
+
+Multiple regression algorithms were trained and compared using **RandomizedSearchCV** with **K-Fold Cross Validation**. Their performances were evaluated using cross-validation scores and regression metrics to determine the best-performing model.
+
+📓 **Kaggle Notebook:**  
+https://www.kaggle.com/code/abacilla/mortgage-data#5.-Machine-Learning-and-Hyperparameter-Tuning
+
+---
+
+# 📊 Dataset
+
+The Mortgage Data dataset contains numerical and categorical features related to mortgage applications and property financing. These attributes are used to build regression models capable of predicting the target mortgage value.
+
+**Target Variable**
+
+- Mortgage Value
+
+> **Note:** The dataset is too large to upload to GitHub, so only the Kaggle dataset link is provided.
+
+📂 **Dataset:**  
+https://www.kaggle.com/datasets/chukwuemeka64/mortgage-data
+
+---
+
+# 🔍 Exploratory Data Analysis (EDA)
+
+The notebook performs exploratory data analysis to understand the dataset structure, identify potential data quality issues, and discover relationships between variables before model training.
+
+### Analysis Performed
+
+- Dataset overview
+- Shape and feature inspection
+- Missing value analysis
+- Duplicate record detection
+- Data type inspection
+- Descriptive statistical analysis
+- Distribution analysis
+- Correlation analysis
+- Numerical feature visualization
+- Categorical feature exploration
+- Target variable distribution
+- Relationship analysis between important variables
+
+### 📌 Key EDA Insights
+
+- The dataset contains both numerical and categorical mortgage-related attributes.
+- Missing values were identified and handled during preprocessing.
+- Correlation analysis highlighted features with strong relationships to the target variable.
+- Feature distributions were analyzed before model development.
+- Exploratory visualizations helped guide preprocessing and model selection.
+
+---
+
+# ⚙️ Data Transformation & Preprocessing
+
+The following preprocessing techniques were performed:
+
+- Missing value handling
+- Duplicate removal
+- Label Encoding
+- Feature Scaling using **StandardScaler**
+- Train-Test Split
+- RandomizedSearchCV
+- K-Fold Cross Validation
+
+---
+
+# 🤖 Models Used
+
+The following Machine Learning regression models were trained:
+
+- Linear Regression
+- Ridge Regression
+- Lasso Regression
+- ElasticNet Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- XGBoost Regressor
+- LightGBM Regressor
+
+---
+
+# 🏆 Results
+
+Models were ranked according to their **Best Cross-Validation R² Score**.
+
+| Rank | Model | Best CV Score (R²) |
+|------|-------------------------|----------------:|
+| 🥇 | LightGBM Regressor | **0.996096** |
+| 🥈 | XGBoost Regressor | **0.995604** |
+| 🥉 | Decision Tree Regressor | **0.980499** |
+| 4 | Ridge Regression | **0.967363** |
+| 5 | Linear Regression | **0.967363** |
+| 6 | ElasticNet Regression | **0.967362** |
+| 7 | Lasso Regression | **0.967329** |
+| 8 | Random Forest Regressor | **0.959799** |
+
+---
+
+### 🏅 Best Model Performance
+
+**Best Model:** 🥇 **LightGBM Regressor**
+
+| Metric | Value |
+|---------|-------:|
+| MAE | **0.024563** |
+| RMSE | **0.034071** |
+| R² Score | **0.995906** |
+
+---
+
+### 🔍 Key Findings
+
+- LightGBM achieved the highest cross-validation score among all evaluated models.
+- XGBoost delivered performance very close to the best-performing model.
+- Tree-based boosting algorithms significantly outperformed traditional linear regression models.
+- RandomizedSearchCV successfully optimized model hyperparameters for improved predictive performance.
+- Cross-validation provided a reliable comparison across all regression models.
+- Proper preprocessing and feature scaling contributed to highly accurate mortgage value predictions.
+
+---
+
+# 🛠 Technologies Used
+
+- Python
+- Kaggle Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- LightGBM
+- RandomizedSearchCV
+
+---
+
+# 🚀 Future Improvements
+
+- Apply SHAP explainability to interpret model predictions.
+- Perform feature importance analysis to identify the strongest mortgage indicators.
+- Experiment with additional boosting algorithms such as CatBoost.
+- Engineer domain-specific mortgage and financial features.
+- Perform detailed residual and error analysis to identify prediction patterns.
+
+---
+
+# 📚 Learning Outcomes
+
+This project demonstrates practical experience in:
+
+- Exploratory Data Analysis (EDA)
+- Data Cleaning
+- Feature Engineering
+- Label Encoding
+- Feature Scaling
+- Regression Model Development
+- Randomized Hyperparameter Tuning
+- K-Fold Cross Validation
+- Model Comparison
+- Performance Evaluation using MAE, RMSE, and R² Score
+- Selecting the best regression model using objective evaluation metrics
+
+---
+
+# 👨‍💻 Author
+
+**Aryan Gupta**
+
+Part of the **AI Engineering Journey** repository.
+
+---
+
+⭐ If you found this project useful, consider giving the repository a **star** and exploring other Machine Learning projects in my **AI Engineering Journey** repository.
